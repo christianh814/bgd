@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: bgd-pr-testing
+  namespace: argocd
+spec:
+  generators:
+  - pullRequest:
+      github:
+        owner: christianh814
+        repo: bgd
+        # Labels is used to filter the PRs that you want to target. (optional)
+        labels:
+        - preview
+      requeueAfterSeconds: 300
+  template:
+    metadata:
+      name: 'bgd-{{branch}}-{{number}}'
+    spec:
+      source:
+        repoURL: 'https://github.com/christianh814/bgd'
+        targetRevision: '{{head_sha}}'
+        path: app/overlays/noroute-green/
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'bgd-{{branch}}-{{number}}'
