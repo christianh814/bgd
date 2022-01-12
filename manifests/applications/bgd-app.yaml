@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bgd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    path: app/overlays/default/
+    repoURL: https://github.com/christianh814/bgd
+    targetRevision: main
+  destination:
+    namespace: bgd
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
