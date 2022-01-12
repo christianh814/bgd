@@ -50,7 +50,7 @@ bgd    Synced        Healthy
 
 Deploy the ApplicationSet
 
-``shell
+```shell
 kubectl apply -f https://raw.githubusercontent.com/christianh814/bgd/main/manifests/applicationsets/bgd-pr-appset.yaml
 ```
 
