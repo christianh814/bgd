@@ -62,6 +62,17 @@ NAME             AGE
 bgd-pr-testing   51s
 ```
 
+## Success
+
 This should create an Application for [every PR listed
 here](https://github.com/christianh814/bgd/pulls) that has the `preview`
 label.
+
+```shell
+$ kubectl get apps -n argocd
+NAME          SYNC STATUS   HEALTH STATUS
+bgd           Synced        Healthy
+bgd-green-3   Synced        Healthy
+```
+
+Note that out of the 2 PRs, only the one with the `preview` label is deployed.
