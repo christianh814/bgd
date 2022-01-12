@@ -9,7 +9,6 @@ spec:
       github:
         owner: christianh814
         repo: bgd
-        # Labels is used to filter the PRs that you want to target. (optional)
         labels:
         - preview
       requeueAfterSeconds: 300
@@ -20,7 +19,7 @@ spec:
       source:
         repoURL: 'https://github.com/christianh814/bgd'
         targetRevision: '{{head_sha}}'
-        path: app/overlays/noroute-green/
+        path: app/overlays/default/
       project: default
       syncPolicy:
         automated:

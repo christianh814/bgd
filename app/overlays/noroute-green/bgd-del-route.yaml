@@ -1,5 +1,0 @@
-$patch: delete
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: bgd
