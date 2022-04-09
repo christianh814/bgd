@@ -8,7 +8,7 @@ spec:
   project: default
   source:
     path: app/overlays/default/
-    repoURL: https://github.com/christianh814/bgd
+    repoURL: https://github.com/jizusun/bgd
     targetRevision: main
   destination:
     namespace: bgd
