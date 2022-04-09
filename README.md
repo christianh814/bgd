@@ -37,7 +37,7 @@ Now you can visit the UI at [http://localhost:8080](http://localhost:8080)
 Deploy the  Application
 
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/christianh814/bgd/main/manifests/applications/bgd-app.yaml
+kubectl apply -f https://raw.githubusercontent.com/jizusun/bgd/main/manifests/applications/bgd-app.yaml
 ```
 
 Verify
@@ -51,7 +51,7 @@ bgd    Synced        Healthy
 Deploy the ApplicationSet
 
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/christianh814/bgd/main/manifests/applicationsets/bgd-pr-appset.yaml
+kubectl apply -f https://raw.githubusercontent.com/jizusun/bgd/main/manifests/applicationsets/bgd-pr-appset.yaml
 ```
 
 Verify that
@@ -65,7 +65,7 @@ bgd-pr-testing   51s
 ## Success
 
 This should create an Application for [every PR listed
-here](https://github.com/christianh814/bgd/pulls) that has the `preview`
+here](https://github.com/jizusun/bgd/pulls) that has the `preview`
 label.
 
 ```shell

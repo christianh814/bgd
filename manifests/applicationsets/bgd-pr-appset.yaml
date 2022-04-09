@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: bgd-pr-testing
-  namespace: argocd
+  namespace: project-hub-research-protal-bp
 spec:
   generators:
   - pullRequest:
       github:
-        owner: christianh814
+        owner: jizusun
         repo: bgd
         labels:
         - preview
@@ -17,7 +17,7 @@ spec:
       name: 'bgd-{{branch}}-{{number}}'
     spec:
       source:
-        repoURL: 'https://github.com/christianh814/bgd'
+        repoURL: 'https://github.com/jizusun/bgd'
         targetRevision: '{{head_sha}}'
         path: app/overlays/default/
       project: default
@@ -25,8 +25,5 @@ spec:
         automated:
           prune: true
           selfHeal: true
-        syncOptions:
-          - CreateNamespace=true
       destination:
         server: https://kubernetes.default.svc
-        namespace: 'bgd-{{branch}}-{{number}}'

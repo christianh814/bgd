@@ -3,15 +3,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bgd
-  namespace: argocd
+  namespace: project-hub-research-protal-bp
 spec:
   project: default
   source:
     path: app/overlays/default/
-    repoURL: https://github.com/christianh814/bgd
+    repoURL: https://github.com/jizusun/bgd
     targetRevision: main
   destination:
-    namespace: bgd
+    namespace: project-hub-research-protal-bp
     server: https://kubernetes.default.svc
   syncPolicy:
     syncOptions:
