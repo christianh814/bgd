@@ -11,7 +11,7 @@ spec:
         repo: bgd
         labels:
         - preview
-      requeueAfterSeconds: 300
+      requeueAfterSeconds: 5
   template:
     metadata:
       name: 'bgd-{{branch}}-{{number}}'
