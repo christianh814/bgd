@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: bgd-pr-testing
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   generators:
   - pullRequest:
       github:
-        owner: christianh814
+        owner: justone0127
         repo: bgd
         labels:
         - preview
@@ -17,10 +17,10 @@ spec:
       name: 'bgd-{{branch}}-{{number}}'
     spec:
       source:
-        repoURL: 'https://github.com/christianh814/bgd'
+        repoURL: 'https://github.com/justone0127/bgd-test'
         targetRevision: '{{head_sha}}'
         path: app/overlays/default/
-      project: default
+      project: bgd
       syncPolicy:
         automated:
           prune: true
