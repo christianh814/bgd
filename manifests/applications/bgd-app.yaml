@@ -3,12 +3,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: bgd
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   project: default
   source:
     path: app/overlays/default/
-    repoURL: https://github.com/christianh814/bgd
+    repoURL: https://github.com/justone0127/bgd-test
     targetRevision: main
   destination:
     namespace: bgd
