@@ -20,7 +20,7 @@ spec:
         repoURL: 'https://github.com/justone0127/bgd-test'
         targetRevision: '{{head_sha}}'
         path: app/overlays/default/
-      project: bgd
+      project: default
       syncPolicy:
         automated:
           prune: true
