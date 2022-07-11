@@ -11,6 +11,3 @@ patchesJson6902:
     version: v1
 resources:
 - ../../base
-
-commonAnnotations:
-  myappname: bgd
