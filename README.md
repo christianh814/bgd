@@ -1,6 +1,6 @@
 # Blue/Green Test App for PR ApplicationSet
 
-This is to test the [PR ApplicationSet Generator](https://argocd-applicationset.readthedocs.io/en/stable/Generators-Pull-Request/).
+This is to test the [PR ApplicationSet Generator](https://argocd-applicationset.readthedocs.io/en/stable/Generators-Pull-Request/). This repo can be used while following [this blogpost](https://developers.redhat.com/articles/2022/04/05/automate-cicd-pull-requests-argo-cd-applicationsets#)
 
 ## Prereqs
 
