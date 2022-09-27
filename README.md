@@ -10,12 +10,11 @@ You need a Kubernetes cluster. [Kind](kind.sigs.k8s.io/) is the easiest to test 
 kind create cluster
 ```
 
-Deploy argocd with ApplicationSets addon.
+Install Argo CD.
 
 ```shell
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/applicationset/stable/manifests/install.yaml
 ```
 
 To access the Argo CD UI, first get the Admin password:
